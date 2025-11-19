@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "348419615423",
+    "project_id": "newproject-231ff",
+    "storage_bucket": "newproject-231ff.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348419615423:android:a11c42645939e16f74340a",
+        "android_client_info": {
+          "package_name": "com.dailyUtilities"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8mcjsEnGBE2eIym6l0mBTdTJkNY0P3FE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348419615423:android:ca3225f646b47aad74340a",
+        "android_client_info": {
+          "package_name": "com.exchangeRates"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8mcjsEnGBE2eIym6l0mBTdTJkNY0P3FE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348419615423:android:eab9444de28f318074340a",
+        "android_client_info": {
+          "package_name": "com.newprojectapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8mcjsEnGBE2eIym6l0mBTdTJkNY0P3FE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

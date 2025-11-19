@@ -1,4 +1,4 @@
-package com.newprojectapp
+package com.dailyUtilities
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

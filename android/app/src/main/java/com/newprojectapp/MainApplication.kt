@@ -1,4 +1,4 @@
-package com.newprojectapp
+package com.dailyUtilities
 
 import android.app.Application
 import com.facebook.react.PackageList
