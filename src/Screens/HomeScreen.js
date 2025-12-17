@@ -80,9 +80,9 @@ export default function HomeScreen({ route }) {
     const result = await getMarketData();
     if (result.success && result.data) {
       const sortedData = result.data.sort(
-        (a,b)=> new Date(b.date) - new Date(a.date)
-      )
-     
+        (a, b) => new Date(b.date) - new Date(a.date),
+      );
+
       setMarketData(sortedData);
     }
     setIsLoading(false);
@@ -233,7 +233,7 @@ export default function HomeScreen({ route }) {
 
   // ----------------new renderitems----------------------------
   const renderItem = ({ item }) => (
-    <View>
+    <View style={{ paddingTop: 15 }}>
       <TouchableOpacity
         style={styles.cardContainer}
         onPress={() =>
@@ -637,14 +637,15 @@ export default function HomeScreen({ route }) {
               </View>
 
               {/* -------------------------------- */}
-
-              <FlatList
-                data={prioritizedOtherItems}
-                renderItem={renderItem}
-                keyExtractor={(item, index) => index.toString()}
-                contentContainerStyle={{ padding: responsiveWidth(3) }}
-                scrollEnabled={false}
-              />
+              <View style={{ marginTop: -15, marginBottom: 15 }}>
+                <FlatList
+                  data={prioritizedOtherItems}
+                  renderItem={renderItem}
+                  keyExtractor={(item, index) => index.toString()}
+                  contentContainerStyle={{ padding: responsiveWidth(3) }}
+                  scrollEnabled={false}
+                />
+              </View>
             </>
           )}
         </ScrollView>

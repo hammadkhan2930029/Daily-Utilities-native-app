@@ -36,7 +36,7 @@ export const CustomHeader = ({
 
         {/* Title */}
         {title === 'Home' ? (
-          <Image source={AppImages.logo2} style={styles.logo} />
+          <Image source={AppImages.logo1} style={styles.logo} />
         ) : (
           <Text style={styles.title}>{title}</Text>
         )}
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   logo: {
-    width: responsiveScreenWidth(18),
+    width: responsiveScreenWidth(23),
     resizeMode: 'contain',
   },
 });
