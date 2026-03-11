@@ -5,6 +5,9 @@ import { ToastProvider } from 'react-native-toast-notifications';
 import { PermissionsAndroid } from 'react-native';
 import messaging from '@react-native-firebase/messaging';
 import { Alert, Linking } from 'react-native';
+import { DrawerProvider } from './src/components/CustomeDrawer/drawerContext';
+import { CustomDrawer } from './src/components/CustomeDrawer/customDrawer';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   //---------------------------------------------------------
@@ -98,7 +101,14 @@ export default function App() {
         hidden={false}
         backgroundColor="#fff"
       />
-      <AppNavigator />
+      <NavigationContainer>
+        <DrawerProvider>
+
+          <AppNavigator />
+          <CustomDrawer />
+        </DrawerProvider>
+      </NavigationContainer>
+
     </ToastProvider>
   );
 }

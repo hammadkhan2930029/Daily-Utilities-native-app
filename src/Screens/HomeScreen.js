@@ -249,13 +249,13 @@ export default function HomeScreen({ route }) {
               item.item === 'Silver'
                 ? AppImages.silver
                 : item.category === 'Currency'
-                ? AppImages.currency
-                : null
+                  ? AppImages.currency
+                  : null
             }
             style={styles.cardImg}
           />
 
-          <View style={styles.viewTop}>
+          <View style={styles.viewTop2}>
             <Text style={styles.name}>{item.item}</Text>
             <Text style={styles.date}>Date: {item.date || 'N/A'}</Text>
           </View>
@@ -337,7 +337,9 @@ export default function HomeScreen({ route }) {
         title="Home"
         leftIcon="menu"
         rightIcon="search"
-        onRightPress={() => console.log('Search pressed')}
+        // onLeftPress={() => }
+
+        // onRightPress={() => console.log('Search pressed')}
       />
       <SafeAreaView style={styles.container}>
         <ScrollView>
@@ -679,6 +681,14 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
   },
   viewTop: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    // backgroundColor:'green',
+    padding: 10,
+    // borderColor: '#d4af37',
+    // borderBottomWidth: 2,
+  },
+  viewTop2: {
     justifyContent: 'space-between',
     flexDirection: 'row',
     // backgroundColor:'green',

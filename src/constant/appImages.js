@@ -10,6 +10,7 @@ export const AppImages = {
     oil: require('../assets/images/oil.jpg'),
     dimond: require('../assets/images/dimond.jpg'),
     currency: require('../assets/images/currency.jpg'),
+    
 
 
 }

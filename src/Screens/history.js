@@ -341,7 +341,7 @@ export const History = props => {
           <Text style={styles.price}>Rs {formatNumber(u.price)}</Text>
         </View>
       ))}
-      <View>
+      {/* <View>
         <TouchableOpacity
           style={styles.editBtn}
           onPress={() => navigation.navigate('EditData', { id: item.id })}
@@ -349,7 +349,7 @@ export const History = props => {
           <MaterialIcons name="edit" size={20} color="#fff" />
           <Text style={styles.editBtnText}>Edit</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
     </View>
   );
 
@@ -386,7 +386,7 @@ export const History = props => {
       <CustomHeader
         title="History"
         leftIcon="menu"
-        rightIcon="search"
+        // rightIcon="search"
         onLeftPress={() => navigation.goBack()}
         onRightPress={() => console.log('Search pressed')}
       />

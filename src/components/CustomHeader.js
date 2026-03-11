@@ -9,6 +9,7 @@ import {
   Image,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { useDrawer } from './CustomeDrawer/drawerContext';
 
 import { useNavigation, DrawerActions } from '@react-navigation/native';
 import { AppImages } from '../constant/appImages';
@@ -24,13 +25,23 @@ export const CustomHeader = ({
   rightIcon = null,
 }) => {
   const navigation = useNavigation();
+  const { openDrawer } = useDrawer();
+  const handleLeftPress = () => {
+    if (leftIcon === 'menu') {
+      openDrawer(); // Agar menu icon hai toh drawer kholo
+    } else if (onLeftPress) {
+      onLeftPress(); // Agar koi custom function pass kiya hai
+    } else {
+      navigation.goBack(); // Warna back jao
+    }
+  };
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar backgroundColor="#fff" barStyle="dark-content" />
 
       <View style={styles.container}>
         {/* Left Icon */}
-        <TouchableOpacity onPress={onLeftPress} style={styles.iconContainer}>
+        <TouchableOpacity onPress={handleLeftPress} style={styles.iconContainer}>
           {leftIcon && <Ionicons name={leftIcon} size={24} color="#000" />}
         </TouchableOpacity>
 

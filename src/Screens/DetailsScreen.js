@@ -257,7 +257,7 @@ export const GoldPriceHistory = props => {
           ))}
         </View>
       )}
-      <View>
+      {/* <View>
         <TouchableOpacity
           style={styles.editBtn}
           onPress={() => navigation.navigate('EditData', { id: item.id })}
@@ -265,7 +265,7 @@ export const GoldPriceHistory = props => {
           <MaterialIcons name="edit" size={20} color="#fff" />
           <Text style={styles.editBtnText}>Edit</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
     </View>
   );
 
@@ -321,9 +321,9 @@ export const GoldPriceHistory = props => {
       <CustomHeader
         title="Details"
         leftIcon="arrow-back"
-        rightIcon="search"
+        // rightIcon="search"
         onLeftPress={() => navigation.goBack()}
-        onRightPress={() => console.log('Search pressed')}
+      
       />
       <View style={styles.container}>
         {isloading ? (
