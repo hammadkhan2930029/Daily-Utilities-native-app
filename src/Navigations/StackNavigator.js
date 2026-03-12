@@ -5,6 +5,7 @@ import { Main } from '../Screens/main';
 import { CustomDrawer } from '../components/CustomeDrawer/customDrawer';
 import { Disclaimer } from '../Screens/Disclaimer';
 import { Developers } from '../Screens/Developers';
+import { History } from '../Screens/history';
 
 
 const Stack = createNativeStackNavigator();
@@ -19,14 +20,7 @@ export default function StackNavigator() {
       <Stack.Screen name="CustomDrawer" component={CustomDrawer} />
       <Stack.Screen name="Disclaimer" component={Disclaimer} />
       <Stack.Screen name="Developers" component={Developers} />
-
-
-
-
-
-
-
-
+      
     </Stack.Navigator>
   );
 }

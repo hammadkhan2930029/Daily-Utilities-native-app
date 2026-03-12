@@ -12,6 +12,8 @@ const { width } = Dimensions.get("window");
 
 export const CustomDrawer = () => {
   const navigation = useNavigation()
+
+  //----------------------------------------------
   const { isOpen, closeDrawer } = useDrawer();
   const translateX = useRef(new Animated.Value(-width)).current;
   const overlayOpacity = useRef(new Animated.Value(0)).current;
@@ -61,6 +63,18 @@ export const CustomDrawer = () => {
 
   }
 
+  const handleNavigation = (targetScreen) => {
+    closeDrawer()
+
+
+    setTimeout(() => {
+      navigation.navigate('HomeStack', {
+        screen: targetScreen,
+      });
+
+    }, 300);
+  };
+
   return (
     <View style={StyleSheet.absoluteFill}>
       {/* Overlay background */}
@@ -102,7 +116,7 @@ export const CustomDrawer = () => {
               <MaterialIcons name='keyboard-arrow-right' size={24} color="#909090" />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.item} onPress={() => handleNavigations('Developers')}>
+            <TouchableOpacity style={styles.item} onPress={() => handleNavigation('Developers')}>
               <View style={styles.item2}>
                 <MaterialIcons name='code' size={24} color="#004a80" />
                 <Text style={styles.itemText}>Developer</Text>
@@ -110,7 +124,7 @@ export const CustomDrawer = () => {
               <MaterialIcons name='keyboard-arrow-right' size={24} color="#909090" />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.item} onPress={() => handleNavigations('Disclaimer')}>
+            <TouchableOpacity style={styles.item} onPress={() => handleNavigation('Disclaimer')}>
               <View style={styles.item2}>
                 <MaterialIcons name='warning-amber' size={24} color="#004a80" />
                 <Text style={styles.itemText}>Disclaimer</Text>

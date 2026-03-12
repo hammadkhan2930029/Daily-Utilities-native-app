@@ -50,6 +50,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import BottomTabNavigator from './BottomTabsNavigator';
 import { Splash } from '../Screens/splash';
+import { CustomDrawer } from '../components/CustomeDrawer/customDrawer';
 
 const RootStack = createNativeStackNavigator();
 
@@ -59,6 +60,14 @@ export default function AppNavigator() {
       <RootStack.Screen name="Splash" component={Splash} />
 
       <RootStack.Screen name="MainApp" component={BottomTabNavigator} />
+      <RootStack.Screen
+        name="CustomDrawer"
+        component={CustomDrawer}
+        options={{
+          animation: 'slide_from_left',
+          presentation: 'transparentModal'
+        }}
+      />
     </RootStack.Navigator>
   );
 }
