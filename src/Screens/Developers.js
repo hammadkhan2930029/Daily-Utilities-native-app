@@ -12,7 +12,7 @@ export const Developers = () => {
             <CustomHeader
                 title="Developer"
                 leftIcon="arrow-back"
-                // rightIcon="search"
+                // rightIcon="menu"
                 onLeftPress={() => navigation.goBack()}
 
             />

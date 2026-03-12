@@ -55,15 +55,11 @@ const RootStack = createNativeStackNavigator();
 
 export default function AppNavigator() {
   return (
-    // <NavigationContainer>
     <RootStack.Navigator screenOptions={{ headerShown: false }}>
-      {/* Pehle Splash screen */}
       <RootStack.Screen name="Splash" component={Splash} />
 
-      {/* Splash ke baad direct Home (MainApp) */}
       <RootStack.Screen name="MainApp" component={BottomTabNavigator} />
     </RootStack.Navigator>
-    // </NavigationContainer>
   );
 }
 

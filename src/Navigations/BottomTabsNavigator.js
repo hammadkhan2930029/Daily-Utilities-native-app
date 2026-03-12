@@ -42,7 +42,6 @@ export default function BottomTabNavigator() {
           height: 70,
           justifyContent: "center",
           alignItems: "center",
-          // paddingTop:15
         },
        tabBarItemStyle:{
         marginTop:responsiveHeight(2)
